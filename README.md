@@ -2,6 +2,8 @@
 
 > **A two-stage forensic analysis of 915 Ethereum documents to identify Vitalik Buterin's pseudonymous publication.**
 
+🌐 **[Live Demo](https://andreolf.github.io/vitalik-hunt-web)** • 📚 **[Documentation](#-understanding-the-analysis)** • 🔬 **[Analysis Pipeline](https://github.com/andreolf/vitalik-hunt)**
+
 [![React](https://img.shields.io/badge/React-19-61dafb?logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06b6d4?logo=tailwindcss)](https://tailwindcss.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178c6?logo=typescript)](https://www.typescriptlang.org)
@@ -228,6 +230,13 @@ For the full analysis pipeline, see [vitalik-hunt](https://github.com/andreolf/v
 
 ### GitHub Pages
 
+✅ **Already deployed!** Access the live site at:
+
+🌐 **[https://andreolf.github.io/vitalik-hunt-web](https://andreolf.github.io/vitalik-hunt-web)**
+
+The site is automatically built and deployed from the `main` branch. Any push to `main` triggers a new deployment.
+
+**To deploy your own fork:**
 1. Go to **Settings → Pages**
 2. Select `main` branch as source
 3. GitHub will build and deploy automatically
