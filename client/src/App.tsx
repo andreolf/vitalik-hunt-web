@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, Router } from "wouter";
+import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -9,9 +9,9 @@ import Home from "./pages/Home";
 function AppRouter() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      {/* Match root path and any path starting with / */}
+      <Route path={"/:rest*"} component={Home} />
+      {/* Fallback */}
       <Route component={NotFound} />
     </Switch>
   );
@@ -23,11 +23,6 @@ function AppRouter() {
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
-  // Use BASE_URL from Vite (set in vite.config.ts)
-  // For GitHub Pages: /vitalik-hunt-web/
-  // For local dev: /
-  const basePath = import.meta.env.BASE_URL;
-  
   return (
     <ErrorBoundary>
       <ThemeProvider
@@ -36,9 +31,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Router base={basePath}>
-            <AppRouter />
-          </Router>
+          <AppRouter />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
