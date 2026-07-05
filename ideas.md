@@ -13,6 +13,7 @@ This is a **technical investigation interface** for stylometry analysis—a tool
 **Design Movement:** Contemporary data visualization + minimalist brutalism. Inspired by academic research tools, forensic analysis dashboards, and technical documentation sites.
 
 **Core Principles:**
+
 1. **Data-first layout** — Information hierarchy drives structure; no decorative elements
 2. **High contrast typography** — Bold headings (Courier Prime for code/technical terms), readable body text (Inter)
 3. **Monochromatic with accent** — Dark background (#0a0a0a), white text, single accent color (amber/gold #f59e0b for highlights)
@@ -20,6 +21,7 @@ This is a **technical investigation interface** for stylometry analysis—a tool
 5. **Technical authenticity** — Subtle grid backgrounds, code-like typography for scores, minimal shadows
 
 **Color Philosophy:**
+
 - **Background:** Deep charcoal (#0a0a0a) — feels like a terminal, authoritative
 - **Text:** Off-white (#f5f5f5) — high contrast, easy on eyes
 - **Accent:** Amber (#f59e0b) — draws attention to key findings (top candidates, high scores)
@@ -27,29 +29,34 @@ This is a **technical investigation interface** for stylometry analysis—a tool
 - **Danger:** Red (#ef4444) — for low scores, warnings
 
 **Layout Paradigm:**
+
 - **Hero section:** Full-width dark background with large typography. Headline + key finding (top candidate).
 - **Two-column grid:** Left = methodology/corpus overview. Right = interactive explorer.
 - **Card-based candidates:** Each top-15 candidate is a card with Delta score, LLM score, and expandable details.
 - **Sticky sidebar:** Navigation to jump between sections (Summary, Methodology, Top Candidates, Explorer).
 
 **Signature Elements:**
+
 1. **Score badges:** Large, monospaced numbers (Delta contrast, LLM score) with subtle background tint
 2. **Comparison bars:** Visual representation of Delta scores (contrast bar, dV bar) — horizontal bars with gradient fill
 3. **Metadata tags:** Small pills showing source (EIP, ethresear.ch, etc.) and category
 
 **Interaction Philosophy:**
+
 - **Hover states:** Subtle background tint, slight shadow lift
 - **Expandable cards:** Click to reveal full LLM signal + against arguments
 - **Smooth transitions:** 200ms ease-out for card expansion, 150ms for hover states
 - **Keyboard navigation:** Tab through candidates, Enter to expand
 
 **Animation:**
+
 - Cards fade in on scroll (staggered by 50ms)
 - Score bars animate from 0 to final value on load (600ms ease-out)
 - Hover: subtle scale (1.02) + shadow lift
 - No unnecessary motion; respect `prefers-reduced-motion`
 
 **Typography System:**
+
 - **Display:** Courier Prime Bold, 48px (hero headline)
 - **Heading 1:** Inter Bold, 32px (section titles)
 - **Heading 2:** Inter SemiBold, 24px (subsection titles)
@@ -58,14 +65,16 @@ This is a **technical investigation interface** for stylometry analysis—a tool
 - **Code:** Courier Prime Regular, 14px (technical terms, URLs)
 
 **Brand Essence:**
-*A transparent, forensic investigation tool for stylometry analysis. For researchers, enthusiasts, and curious minds. Different because it prioritizes evidence over narrative.*
+_A transparent, forensic investigation tool for stylometry analysis. For researchers, enthusiasts, and curious minds. Different because it prioritizes evidence over narrative._
 
 **Brand Voice:**
+
 - Headlines: Direct, technical, intriguing ("The Evidence So Far", "Why This Candidate Scores Low")
 - CTAs: Action-oriented ("Explore Full Ranking", "View Methodology")
 - Microcopy: Precise, no fluff ("Contrast score: how much closer to Vitalik than to background authors")
 
 Example lines:
+
 - "18 out of 100. The highest score yet—but still far from a match."
 - "All candidates lack the dense em-dash parentheticals that define Vitalik's prose."
 
