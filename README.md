@@ -13,9 +13,15 @@
 
 ## 📖 Overview
 
-In June 2026, Vitalik Buterin issued an anonymity challenge: he published one "medium importance" Ethereum document under a pseudonym and challenged the community to find it. His day-13 hint revealed that people's searches "fail to include categories of documents that really should be included."
+### The Challenge
 
-**Vitalik Hunt** is an interactive investigation tool that applies **two-stage stylometry analysis** to narrow down the target:
+In June 2026, Vitalik Buterin issued an anonymity challenge on X (Twitter):
+
+> **"I've published one 'medium importance' Ethereum document under a pseudonym this decade. Can you find it? Day-13 hint: people's searches fail to include categories of documents that really should be included."**
+
+**Reference:** [Vitalik's Tweet](https://x.com/VitalikButerin/status/2069080988097876084?s=20)
+
+This challenge inspired **Vitalik Hunt**, an interactive investigation tool that applies **two-stage stylometry analysis** to narrow down the target:
 
 1. **Stage 1: Burrows' Delta** — Contrastive function-word analysis comparing 915 candidate documents against Vitalik's known corpus (338 texts) and 10 background Ethereum authors
 2. **Stage 2: LLM Judge** — Claude-Sonnet-4-6 evaluates top-15 candidates on stylistic markers (hedging, em-dashes, steelmanning, analogies, register mixing)
@@ -180,6 +186,26 @@ Claude evaluates each candidate on:
 - **18–25:** High stylistic match (rare; suggests strong candidate)
 - **10–17:** Moderate match (some signature markers present)
 - **0–9:** Low match (lacks author's distinctive style)
+
+---
+
+## 🎯 The Challenge Details
+
+**What we're looking for:**
+- One "medium importance" Ethereum document
+- Published under a pseudonym
+- Published sometime this decade (2020–2026)
+- Written by Vitalik Buterin
+
+**The hint (Day 13):**
+> "People's searches fail to include categories of documents that really should be included."
+
+This suggests the target document exists in a category that default search strategies miss—possibly:
+- Chinese-language Ethereum documentation
+- Governance proposals or DAO discussions
+- Protocol whitepapers or technical specifications
+- Ethereum Foundation internal documents
+- Deliberately obfuscated or style-laundered drafts
 
 ---
 
