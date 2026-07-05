@@ -220,9 +220,7 @@ export default function Home() {
 
       <footer>
         <p className="muted">
-          Analysis pipeline:{" "}
-          <a href="https://github.com/andreolf/vitalik-hunt">vitalik-hunt</a>{" "}
-          &middot; site:{" "}
+          Data, methodology and source:{" "}
           <a href="https://github.com/andreolf/vitalik-hunt-web">
             vitalik-hunt-web
           </a>{" "}
