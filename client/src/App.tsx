@@ -23,7 +23,10 @@ function AppRouter() {
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
-  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "") || "";
+  // Use BASE_URL from Vite (set in vite.config.ts)
+  // For GitHub Pages: /vitalik-hunt-web/
+  // For local dev: /
+  const basePath = import.meta.env.BASE_URL;
   
   return (
     <ErrorBoundary>
