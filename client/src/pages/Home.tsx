@@ -118,16 +118,42 @@ export default function Home() {
         </section>
 
         <section>
-          <h2>The short answer</h2>
+          <h2>The answer</h2>
           <p>
-            <strong>Probably not found yet.</strong> The top{" "}
-            {summary.top_candidates_scored} candidates score between{" "}
-            {summary.lowest_llm_score} and {summary.highest_llm_score} out of
-            100 on the stylistic rubric &mdash; none of them read like Vitalik.
-            The most likely explanations: the document is outside this candidate
-            pool (the hint suggests exactly that), it was deliberately
-            style-laundered, or it sits below the top 15 and needs manual
-            reading.
+            <strong>
+              Our best candidate:{" "}
+              <a href="https://ethresear.ch/t/privacy-preserving-nullifiers-for-proof-of-identity-applications/18551">
+                Privacy-preserving nullifiers for proof-of-identity
+                applications
+              </a>
+            </strong>
+            , posted on ethresear.ch in February 2024 under the handle
+            &ldquo;turboblitz&rdquo;.
+          </p>
+          <p>
+            The reasoning goes in three steps. First, the challenge requires a
+            pseudonym, which quietly eliminates most of the top 15: documents
+            signed by Micah Zoltu, Greg Colvin, Ed Felten, Nick Mudge and
+            other established, verifiable identities can&rsquo;t be it, and
+            neither can authors like barryWhiteHat whose pseudonym is itself a
+            well-known separate identity. Second, among the pseudonymous
+            remainder, this post ranks first on both stages: the highest LLM
+            score ({summary.highest_llm_score}/100) and a positive Delta
+            contrast, meaning it sits stylometrically closer to Vitalik than
+            to any of the ten background authors. Third, the subject &mdash;
+            privacy-preserving identity proofs &mdash; is the theme Vitalik
+            has returned to most persistently this decade, and an ethresear.ch
+            protocol sketch fits &ldquo;medium importance&rdquo; better than a
+            shipped EIP.
+          </p>
+          <p>
+            Confidence: <strong>low</strong>. Even the winner scores only{" "}
+            {summary.highest_llm_score}/100 on the stylistic rubric &mdash;
+            nothing in the pool reads convincingly like Vitalik. If this guess
+            is wrong, the likeliest reasons are that the document sits in a
+            category our scrapers never touched (the day-13 hint points
+            exactly there) or that it was deliberately style-laundered, which
+            defeats function-word stylometry by construction.
           </p>
         </section>
 

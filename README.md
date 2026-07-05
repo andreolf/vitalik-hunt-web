@@ -68,9 +68,15 @@ For each candidate the judge produced a score plus the strongest argument *for* 
 
 ## Results
 
-All top-15 candidates score **4–18 out of 100**. Nothing reads like Vitalik. Given the day-13 hint ("searches fail to include categories of documents that really should be included"), the most likely explanation is that the document isn't in this pool at all. Alternatives: it was deliberately style-laundered (e.g. LLM-rewritten, which defeats function-word stylometry), or it sits below the top-15 cutoff.
+**Best candidate: [Privacy-preserving nullifiers for proof-of-identity applications](https://ethresear.ch/t/privacy-preserving-nullifiers-for-proof-of-identity-applications/18551)** — ethresear.ch, February 2024, posted under the handle "turboblitz".
 
-A negative result with a working method is still useful: the pipeline is reusable on any expanded pool.
+The reasoning, in three steps:
+
+1. **Pseudonym filter.** The challenge requires a pseudonym, which eliminates most of the top 15 outright: documents signed by established, verifiable identities (Micah Zoltu, Greg Colvin, Ed Felten, Nick Mudge, lightclient et al.) can't be it, nor can authors like barryWhiteHat whose pseudonym is itself a well-known separate identity.
+2. **Both stages agree.** Among the pseudonymous remainder, this post ranks first on both the LLM rubric (18/100, the pool maximum) and Delta contrast (positive — closer to Vitalik than to any background author).
+3. **Priors.** Privacy-preserving identity proofs are the theme Vitalik has returned to most persistently this decade, and an ethresear.ch protocol sketch fits "medium importance" better than a shipped EIP.
+
+**Confidence: low.** Even the winner scores 18/100 — nothing in the pool reads convincingly like Vitalik. If the guess is wrong, the likeliest reasons are that the document sits in a category the scrapers never touched (the day-13 hint points exactly there) or that it was style-laundered, which defeats function-word stylometry by construction. Either way the pipeline is reusable on any expanded pool.
 
 ## Limitations and next steps
 
